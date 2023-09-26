@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_store_24"
+        android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/nav_capsulas"
+        android:icon="@drawable/capsulas"
+        android:title="@string/menu_capsulas" />
+    <item
+        android:id="@+id/nav_chas"
+        android:icon="@drawable/cha"
+        android:title="@string/menu_chas" />
+    <item
+        android:id="@+id/nav_temperos"
+        android:icon="@drawable/temperos"
+        android:title="@string/menu_temperos" />
+    <item
+        android:id="@+id/nav_graos"
+        android:icon="@drawable/graos"
+        android:title="@string/menu_graos" />
+    <item
+        android:id="@+id/nav_faleconosco"
+        android:icon="@drawable/baseline_sms_24"
+        android:title="@string/menu_faleconosco" />
+
+    </group>
+
+</menu>

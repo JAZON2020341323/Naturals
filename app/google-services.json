@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "728199263080",
+    "project_id": "naturals-92318",
+    "storage_bucket": "naturals-92318.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728199263080:android:fff30d555b1a566a5fdcdd",
+        "android_client_info": {
+          "package_name": "com.example.naturals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728199263080-fmgoe6g4qu3i1bpdoh6evkp3cnovbjq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBajRZJiWLmHcOH3QI0c9iW3fReR3sCdro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728199263080-fmgoe6g4qu3i1bpdoh6evkp3cnovbjq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
