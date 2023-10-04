@@ -7,18 +7,42 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.naturals.ui.home.HomeFragment"
+        android:name="com.example.naturals.ui.home.HomeLista"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_nav_home_to_nav_capsulas2"
-            app:destination="@id/nav_capsulas" />
-    </fragment>
+        tools:layout="@layout/home_lista" />
     <fragment
         android:id="@+id/nav_capsulas"
         android:name="com.example.naturals.ui.capsulas.CapsulasFragment"
         android:label="@string/menu_capsulas"
         tools:layout="@layout/activity_catalogode_produtos" />
+    <fragment
+        android:id="@+id/nav_chas"
+        android:name="com.example.naturals.ui.chas.ChasFragment"
+        android:label="@string/menu_chas"
+        tools:layout="@layout/fragment_chas" />
+    <fragment
+        android:id="@+id/nav_temperos"
+        android:name="com.example.naturals.ui.temperos.TemperosFragment"
+        android:label="@string/menu_temperos"
+        tools:layout="@layout/fragment_temperos" />
+    <fragment
+        android:id="@+id/nav_graos"
+        android:name="com.example.naturals.ui.graos.GraosFragment"
+        android:label="@string/menu_graos"
+        tools:layout="@layout/fragment_graos" />
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.example.naturals.ui.graos.GraosFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/fragment_perfil" />
+
+    <fragment
+        android:id="@+id/nav_faleconosco"
+        android:name="com.example.naturals.ui.faleconosco.FaleConoscoFragment"
+        android:label="@string/menu_faleconosco"
+        tools:layout="@layout/activity_main2" />
+
+
 
 
 </navigation>

@@ -47,7 +47,7 @@ public class CapsulasAdapter extends RecyclerView.Adapter<CapsulasAdapter.Capsul
         return capsulasList.size();
     }
 
-    public static class CapsulasViewHolder extends  RecyclerView.ViewHolder{
+    public static class CapsulasViewHolder extends RecyclerView.ViewHolder{
 
         CapsulasItemBinding binding;
 

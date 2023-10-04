@@ -3,10 +3,8 @@ package com.example.naturals.adapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.naturals.databinding.CapsulasItemBinding;
 import com.example.naturals.modelo_de_dados.Chas;
 
@@ -27,6 +25,8 @@ public class ChasAdapter extends RecyclerView.Adapter<ChasAdapter.ChasViewHolder
         CapsulasItemBinding listItem;
         listItem = CapsulasItemBinding.inflate(LayoutInflater.from(context),parent,false);
         return new ChasViewHolder(listItem);
+
+        //Cria a visualizção pra lista
     }
 
     @Override

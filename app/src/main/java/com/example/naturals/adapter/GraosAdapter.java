@@ -3,11 +3,8 @@ package com.example.naturals.adapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.naturals.databinding.ActivityListaBinding;
 import com.example.naturals.databinding.CapsulasItemBinding;
 import com.example.naturals.modelo_de_dados.Graos;
 
@@ -29,11 +26,12 @@ public class GraosAdapter extends RecyclerView.Adapter<GraosAdapter.GraosViewHol
         CapsulasItemBinding listItem;
         listItem = CapsulasItemBinding.inflate(LayoutInflater.from(context),parent,false);
         return new GraosViewHolder(listItem);
+
+        //Cria a visualizção pra lista
     }
 
     @Override
     public void onBindViewHolder(@NonNull GraosViewHolder holder, int position) {
-
         holder.binding.imageView4.setBackgroundResource(graosList.get(position).getImgCapsulas());
         holder.binding.txtCapsulasName.setText(graosList.get(position).getCapsulasName());
         holder.binding.txtCapsulaDescription.setText(graosList.get(position).getCapsulasDescription());

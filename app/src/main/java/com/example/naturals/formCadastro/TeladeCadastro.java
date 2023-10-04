@@ -41,7 +41,7 @@ public class TeladeCadastro extends AppCompatActivity {
         editTextNome = findViewById(R.id.editTextNome);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextSenha = findViewById(R.id.editTextSenha);
-        buttonCadastrar = findViewById(R.id.buttonConfirmar);
+        buttonCadastrar = findViewById(R.id.buttonCadastrar);
         mAuth = FirebaseAuth.getInstance();
 
         buttonCadastrar.setOnClickListener(new View.OnClickListener() {

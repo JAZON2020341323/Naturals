@@ -11,8 +11,10 @@ import android.widget.Toast;
 
 import com.example.naturals.activities.ActivityMenu;
 import com.example.naturals.R;
+import com.example.naturals.activities.MainActivity;
 import com.example.naturals.formCadastro.TeladeCadastro;
 import com.example.naturals.modelo_de_dados.Usuario;
+import com.example.naturals.ui.home.Tela_Home;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -41,6 +43,9 @@ public class TeladeLogin extends AppCompatActivity {
         button_entrar = findViewById(R.id.button_entrar);
 
 
+
+
+
         button_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +68,7 @@ public class TeladeLogin extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(TeladeLogin.this, ActivityMenu.class));
+                            startActivity(new Intent(TeladeLogin.this, Tela_Home.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(TeladeLogin.this, "Autenticação falhou.",
@@ -84,5 +89,18 @@ public class TeladeLogin extends AppCompatActivity {
     public void AindaNaoEUsuario(View view) {
         Intent in = new Intent(TeladeLogin.this, TeladeCadastro.class);
         startActivity(in);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            reload();
+        }
+    }
+
+    private void reload() {
     }
 }

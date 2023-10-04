@@ -33,8 +33,7 @@ public class ActivityLista extends AppCompatActivity {
         getCapsulas();
     }
 
-
-    private void getCapsulas(){
+    private  void getCapsulas(){
 
         Capsulas  capsula1 = new Capsulas(
                 R.drawable.capsula1,
