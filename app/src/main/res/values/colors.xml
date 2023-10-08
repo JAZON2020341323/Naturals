@@ -12,6 +12,7 @@
     <color name="green1">#0B6F39</color>
     <color name="whitegreen">#FF2FCB44</color>
     <color name="red">#EB0E0E</color>
-    <color name="grey">#6D6767</color>
+    <color name="grey">#868181</color>
+    <color name="greynwhite">#DBDBE4</color>
 
 </resources>

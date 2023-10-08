@@ -93,6 +93,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/scrollView2">
 
+
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
@@ -162,4 +163,7 @@
             app:backgroundTint="@color/lightgreen"
             app:layout_anchor="@id/app_bar"
             app:maxImageSize="30dp" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
