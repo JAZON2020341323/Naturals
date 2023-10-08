@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Naturals"
         tools:targetApi="31">
         <activity
-            android:name=".activities.CarrinhoActivity"
+            android:name=".activities.MainActivity"
             android:exported="false" />
         <activity
             android:name=".activities.DescricaoActivity"
@@ -29,30 +29,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.faleconosco.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Chat.MessageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Chat.MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.faleconosco.ItemMessageReceivedActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.faleconosco.ItemMessageSentActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.faleconosco.Activity_AdministradorNaturals"
-            android:exported="false" />
-        <activity
-            android:name=".ui.faleconosco.ActivityUsuario"
-            android:exported="false" />
-        <activity
-            android:name=".ui.faleconosco.FaleConoscoFragment"
-            android:exported="false" />
-        <activity
-            android:name=".activities.ActivityListaHorizontal_"
             android:exported="false" />
         <activity
             android:name=".activities.Graos_Lista"
@@ -84,7 +60,7 @@
             android:name=".formLogin.TeladeLogin"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.CarrinhoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
