@@ -58,7 +58,7 @@ public class Temperos_List extends AppCompatActivity {
         Temperos tempero3 = new Temperos(
                 R.drawable.tempero3,
                 "Colorau 100g",
-                "O colorau Extra Forte tem como predomínio a semente do urucum, com sua cor mais vibrante, sabor forte, terroso, delicado e um pouco apimentado e com um toque amargo.  Por ser naturalmente anti-inflamatório e repleto de antioxidantes em sua composição, o colorau fortalece a imunidade. Sendo assim, ajuda prevenindo doenças e facilitando o tratamento de muitas outras, ao aliviar o processo inflamatório no organismo\n" +,
+                "O colorau Extra Forte tem como predomínio a semente do urucum, com sua cor mais vibrante, sabor forte, terroso, delicado e um pouco apimentado e com um toque amargo.  Por ser naturalmente anti-inflamatório e repleto de antioxidantes em sua composição, o colorau fortalece a imunidade. Sendo assim, ajuda prevenindo doenças e facilitando o tratamento de muitas outras, ao aliviar o processo inflamatório no organismo",
                 "R$ 1,69"
         );
         temperosList.add(tempero3);
@@ -66,7 +66,7 @@ public class Temperos_List extends AppCompatActivity {
         Temperos tempero4 = new Temperos(
                 R.drawable.tempero4,
                 "Cravo-da-Índia 100g",
-                "O cravo-da-índia, além de ter propriedades medicinais também é uma importante fonte de nutrientes, como vitamina A, vitamina E e beta-caroteno. Pode ser utilizado na sua forma natural para enriquecer a alimentação, ou em forma de cremes e óleos, que selecionam algumas propriedades, para o seu uso na cosmética, por exemplo: Combate infecções; Diminui a pressão arterial; Facilita a digestão; e Melhora a cicatrização;\n" +,
+                "O cravo-da-índia, além de ter propriedades medicinais também é uma importante fonte de nutrientes, como vitamina A, vitamina E e beta-caroteno. Pode ser utilizado na sua forma natural para enriquecer a alimentação, ou em forma de cremes e óleos, que selecionam algumas propriedades, para o seu uso na cosmética, por exemplo: Combate infecções; Diminui a pressão arterial; Facilita a digestão; e Melhora a cicatrização;",
                 "R$ 5,90"
         );
         temperosList.add(tempero4);
@@ -74,7 +74,7 @@ public class Temperos_List extends AppCompatActivity {
         Temperos tempero5 = new Temperos(
                 R.drawable.tempero5,
                 "Cúrcuma 100g",
-                " De sabor forte e característico e de cor amarelada, a cúrcuma é uma especiaria largamente utilizada na culinária para dar cor a pratos de sabor doce, peixes, arroz e molhos em geral, além de trazer diversos benefícios para saúde.\n" +,
+                " De sabor forte e característico e de cor amarelada, a cúrcuma é uma especiaria largamente utilizada na culinária para dar cor a pratos de sabor doce, peixes, arroz e molhos em geral, além de trazer diversos benefícios para saúde." ,
                 "R$ 7,00"
         );
         temperosList.add(tempero5);
@@ -82,7 +82,7 @@ public class Temperos_List extends AppCompatActivity {
         Temperos tempero6 = new Temperos(
                 R.drawable.tempero6,
                 "Lemon Pepper 100g",
-                "O Lemon Pepper é um tempero usado para dar um toque cítrico às preparações. Feito a base de cúrcuma, pimenta preta, coentro, salsinha e óleo vegetal. Ingredientes: sal, cúrcuma, cebola granulada, realçador de sabor glutamato monossódico, pimenta preta, coentro, salsinha, óleo vegetal e conservante ácido cítrico. Sugestão de consumo: substitua o sal pelo lemon pepper na hora de temperar a salada!\n" +,
+                "O Lemon Pepper é um tempero usado para dar um toque cítrico às preparações. Feito a base de cúrcuma, pimenta preta, coentro, salsinha e óleo vegetal. Ingredientes: sal, cúrcuma, cebola granulada, realçador de sabor glutamato monossódico, pimenta preta, coentro, salsinha, óleo vegetal e conservante ácido cítrico. Sugestão de consumo: substitua o sal pelo lemon pepper na hora de temperar a salada!" ,
                 "R$ 8,70"
         );
         temperosList.add(tempero6);

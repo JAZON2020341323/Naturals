@@ -163,3 +163,4 @@
             app:layout_anchor="@id/app_bar"
             app:maxImageSize="30dp" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
