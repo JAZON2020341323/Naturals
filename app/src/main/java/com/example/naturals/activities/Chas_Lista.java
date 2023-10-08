@@ -92,7 +92,7 @@ public class Chas_Lista extends AppCompatActivity {
         Chas cha7 = new Chas(
                 R.drawable.cha7,
                 "Chá de manjericão 100g",
-                "O chá de manjericão, feito a partir das folhas da planta de manjericão, pode oferecer diversos benefícios à saúde. Alguns dos benefícios potenciais do chá de manjericão incluem: efeito calmante, propriedades anti-inflamatórias, melhoria na digestão, suporte ao sistema imunológico, alívio de sintomas respiratórios e efeito antioxidante.\n" +,
+                "O chá de manjericão, feito a partir das folhas da planta de manjericão, pode oferecer diversos benefícios à saúde. Alguns dos benefícios potenciais do chá de manjericão incluem: efeito calmante, propriedades anti-inflamatórias, melhoria na digestão, suporte ao sistema imunológico, alívio de sintomas respiratórios e efeito antioxidante.\n",
                 "R$ 26,00"
         );
         chasList.add(cha7);

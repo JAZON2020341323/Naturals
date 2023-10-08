@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green"
+    android:background="@color/white"
     android:padding="12dp"
     tools:context=".activities.CarrinhoActivity">
 
@@ -24,27 +24,25 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:baselineAligned="false"
                 android:orientation="horizontal"
                 android:padding="12dp">
 
-                <TextView
-                    android:id="@+id/textCarrinho"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:baselineAligned="false"
-                    android:text="Carrinho"
-                    android:textColor="@color/black"
-                    android:textSize="30dp" />
-
                 <ImageView
-                    android:id="@+id/btnVoltar"
+                    android:id="@+id/btnVoltarCarrinho"
                     android:layout_width="40dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="5dp"
                     app:srcCompat="@drawable/setavetor" />
+
+                <TextView
+                    android:id="@+id/textCarrinho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:text="Carrinho"
+                    android:textColor="@color/black"
+                    android:textSize="30dp" />
 
             </LinearLayout>
 
@@ -53,15 +51,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:baselineAligned="false" />
+                android:layout_marginEnd="20dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@color/greynwhite"
-                android:baselineAligned="false"
                 android:padding="12dp">
 
                 <TextView

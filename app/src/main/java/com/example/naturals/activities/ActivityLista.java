@@ -76,7 +76,7 @@ public class ActivityLista extends AppCompatActivity {
         );
         capsulasList.add(capsulas5);
 
-    }
+
 
     Capsulas  capsulas6 = new Capsulas(
             R.drawable.capsula6,
@@ -117,4 +117,6 @@ public class ActivityLista extends AppCompatActivity {
             "R$ 46.00"
     );
         capsulasList.add(capsulas10);
-}
+
+    }
+    }

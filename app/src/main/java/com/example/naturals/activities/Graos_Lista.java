@@ -72,7 +72,7 @@ public class Graos_Lista extends AppCompatActivity {
         Graos grao5 = new Graos(
                 R.drawable.grao5,
                 "Café 100g",
-                "O café é conhecido por seu teor de cafeína, um estimulante natural que pode ajudar a melhorar o estado de alerta, a concentração e a função cognitiva.A cafeína presente no café pode ter efeitos positivos no humor, podendo ajudar a reduzir a sensação de fadiga e melhorar o ânimo. Pode aumentar temporariamente a capacidade física, ajudando a melhorar o desempenho em atividades físicas. Atuando também na prevenção de doenças neurodegenerativas, saúde cardiovascular, são antioxidantes, prevenção de diabetes tipo 2 entre outros.\n" +,
+                "O café é conhecido por seu teor de cafeína, um estimulante natural que pode ajudar a melhorar o estado de alerta, a concentração e a função cognitiva.A cafeína presente no café pode ter efeitos positivos no humor, podendo ajudar a reduzir a sensação de fadiga e melhorar o ânimo. Pode aumentar temporariamente a capacidade física, ajudando a melhorar o desempenho em atividades físicas. Atuando também na prevenção de doenças neurodegenerativas, saúde cardiovascular, são antioxidantes, prevenção de diabetes tipo 2 entre outros.\n",
                 "R$ 4,00"
         );
         graosList.add(grao5);
