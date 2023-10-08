@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Naturals"
         tools:targetApi="31">
         <activity
+            android:name=".activities.CarrinhoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DescricaoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.Chas_Lista"
             android:exported="false" />
         <activity
