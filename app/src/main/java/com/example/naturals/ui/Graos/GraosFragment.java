@@ -1,4 +1,4 @@
-package com.example.naturals.ui.graos;
+package com.example.naturals.ui.Graos;
 
 import android.os.Bundle;
 
@@ -57,10 +57,10 @@ public class GraosFragment extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+   // @Override
+    //public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             //Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_graos, container, false);
-    }
+       // return inflater.inflate(R.layout.fragment_graos, container, false);
+    //}
 }
