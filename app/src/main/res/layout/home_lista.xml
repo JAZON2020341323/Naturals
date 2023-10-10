@@ -22,7 +22,7 @@
             tools:ignore="MissingConstraints">
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/textPesquisar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
@@ -31,7 +31,7 @@
                 android:drawablePadding="9dp"
                 android:fontFamily="sans-serif-black"
                 android:hint="Pesquisar:"
-                android:padding="10dp"
+                android:padding="12dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="13sp"
@@ -127,13 +127,11 @@
 
                 <ImageView
                     android:id="@+id/imageView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="12dp"
+                    android:layout_height="46dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.2"
-                    android:src="@drawable/baseline_lock_24"
-                    android:visibility="invisible"
-                    tools:visibility="invisible" />
+                    android:src="@drawable/baseline_shopping_cart_24"/>
 
                 <ImageView
                     android:id="@+id/imageView12"
@@ -141,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.2"
-                    android:src="@drawable/baseline_shopping_cart_24"
+                    android:src="@drawable/baseline_favorite_24"
                     tools:layout_margin="5dp" />
 
                 <ImageView
@@ -155,14 +153,6 @@
             </LinearLayout>
 
         </com.google.android.material.bottomappbar.BottomAppBar>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:backgroundTint="@color/lightgreen"
-            app:layout_anchor="@id/app_bar"
-            app:maxImageSize="30dp" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
