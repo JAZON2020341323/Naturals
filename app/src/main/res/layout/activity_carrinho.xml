@@ -30,9 +30,9 @@
                 <ImageView
                     android:id="@+id/btnVoltarCarrinho"
                     android:layout_width="40dp"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="5dp"
-                    app:srcCompat="@drawable/setavetor" />
+                    app:srcCompat="@drawable/baseline_arrow_back_24" />
 
                 <TextView
                     android:id="@+id/textCarrinho"
