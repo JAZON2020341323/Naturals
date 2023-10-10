@@ -37,9 +37,6 @@
             android:name=".teladeperfil.activity_editar_perfil"
             android:exported="false" />
         <activity
-            android:name=".Produto_descricao.activity_produto_descricao"
-            android:exported="false" />
-        <activity
             android:name=".catalogodeprodutos.Catalogode_produtos"
             android:exported="false" />
         <activity
