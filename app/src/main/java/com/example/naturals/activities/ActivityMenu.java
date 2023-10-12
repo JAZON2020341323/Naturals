@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.Menu;
 
 import com.example.naturals.R;
-import com.example.naturals.catalogodeprodutos.Catalogode_produtos;
 import com.example.naturals.teladeperfil.activity_telade_perfil;
 import com.google.android.material.navigation.NavigationView;
 
@@ -60,14 +59,5 @@ public class ActivityMenu extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-    public void Perfil(View view) {
-        Intent in = new Intent(ActivityMenu.this, activity_telade_perfil.class);
-        startActivity(in);
-    }
-    public void Catalogo(View view) {
-        Intent in = new Intent(ActivityMenu.this, Catalogode_produtos.class);
-        startActivity(in);
-    }
-
 
 }
