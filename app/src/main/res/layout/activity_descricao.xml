@@ -22,7 +22,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/backBtn"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="16dp"
@@ -42,7 +42,7 @@
                     android:background="@drawable/green_background"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+                    app:layout_constraintTop_toBottomOf="@+id/backBtn" />
 
                 <ImageView
                     android:id="@+id/imgDescricao"
@@ -108,7 +108,7 @@
                         app:srcCompat="@drawable/estrela4" />
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/scoreTxt"
                         android:layout_width="38dp"
                         android:layout_height="18dp"
                         android:layout_marginStart="-299dp"
@@ -132,7 +132,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/viewDescricao"
+                android:id="@+id/txtDescricao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -141,7 +141,7 @@
                 android:text="DOR ZERO é uma cactácea com hábito de liana (cipó), de flores vistosas e folhas ricas em componentes nutricionais. Suas folhas são utilizadas como alimentos ou fins de tratamentos naturais diversos. É hipoalergênica. Seus frutos, que são bagas amarelas e redondas, também servem como alimento. A planta ora-pro-nóbis possui várias propriedades e benefícios, além de ser de cultivo fácil, de ter grande valor nutricional, possui acentuado poder terapêutico curativo." />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_ADD_CARRINHO"
+                android:id="@+id/addCarrinho"
                 android:layout_width="300dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="50dp"

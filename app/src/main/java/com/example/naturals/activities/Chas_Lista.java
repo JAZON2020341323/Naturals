@@ -8,7 +8,6 @@ import android.os.Bundle;
 
 import com.example.naturals.R;
 import com.example.naturals.adapter.ChasAdapter;
-import com.example.naturals.adapter.GraosAdapter;
 import com.example.naturals.databinding.ActivityListaBinding;
 import com.example.naturals.modelo_de_dados.Chas;
 

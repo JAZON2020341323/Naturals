@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/encapsulado" />
 
     <TextView
-        android:id="@+id/Nome_produtoCart"
+        android:id="@+id/nomeProdutoDescricao"
         style="@style/textStyleBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
         android:textSize="18sp"
         android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="@+id/view6"
-        app:layout_constraintStart_toStartOf="@+id/Nome_produtoCart" />
+        app:layout_constraintStart_toStartOf="@+id/nomeProdutoDescricao" />
 
     <TextView
         android:id="@+id/total_ItemCart"
@@ -61,7 +61,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Nome_produtoCart" />
+        app:layout_constraintTop_toTopOf="@+id/nomeProdutoDescricao" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="100dp"

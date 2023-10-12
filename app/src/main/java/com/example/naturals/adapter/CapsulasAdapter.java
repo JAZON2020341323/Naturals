@@ -12,7 +12,7 @@ import com.example.naturals.modelo_de_dados.Capsulas;
 
 import java.util.ArrayList;
 
-public class CapsulasAdapter extends RecyclerView.Adapter<CapsulasAdapter.CapsulasViewHolder> {
+public class  CapsulasAdapter extends RecyclerView.Adapter<CapsulasAdapter.CapsulasViewHolder> {
 
     private final ArrayList<Capsulas> capsulasList;
     private  final Context context;
