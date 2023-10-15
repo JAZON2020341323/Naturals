@@ -11,8 +11,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.naturals.R;
-import com.example.naturals.ui.home.Tela_Home;
 import com.example.naturals.modelo_de_dados.Usuario;
+import com.example.naturals.ui.home.HomeLista;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -63,7 +63,7 @@ public class TeladeCadastro extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             u.setId(user.getUid());
                             u.salvarDados();
-                            startActivity(new Intent(TeladeCadastro.this,Tela_Home.class));
+                            startActivity(new Intent(TeladeCadastro.this, HomeLista.class));
 
                         }else{
                             Toast.makeText(TeladeCadastro.this,"Error ao criar um login",Toast.LENGTH_SHORT).show();

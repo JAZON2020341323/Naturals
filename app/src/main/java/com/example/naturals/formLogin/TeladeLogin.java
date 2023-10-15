@@ -9,12 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.naturals.activities.ActivityMenu;
 import com.example.naturals.R;
-import com.example.naturals.activities.MainActivity;
 import com.example.naturals.formCadastro.TeladeCadastro;
 import com.example.naturals.modelo_de_dados.Usuario;
-import com.example.naturals.ui.home.Tela_Home;
+import com.example.naturals.ui.home.HomeLista;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -68,7 +66,7 @@ public class TeladeLogin extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(TeladeLogin.this, Tela_Home.class));
+                            startActivity(new Intent(TeladeLogin.this, HomeLista.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(TeladeLogin.this, "Autenticação falhou.",

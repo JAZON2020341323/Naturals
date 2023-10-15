@@ -48,9 +48,6 @@
             android:label="@string/title_activity_menu"
             android:theme="@style/Theme.Naturals.NoActionBar" />
         <activity
-            android:name=".ui.home.Tela_Home"
-            android:exported="false" />
-        <activity
             android:name=".formCadastro.TeladeCadastro"
             android:exported="false" />
         <activity

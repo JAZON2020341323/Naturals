@@ -1,6 +1,5 @@
 package com.example.naturals.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -13,13 +12,9 @@ import android.widget.Toast;
 
 import com.example.naturals.R;
 import com.example.naturals.formLogin.TeladeLogin;
-import com.example.naturals.ui.home.Tela_Home;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import com.example.naturals.ui.home.HomeLista;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.ktx.Firebase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (currenteUser != null) {
             //Fazer login automatico com o token de autenticação salvo
-            Intent intent = new Intent(MainActivity.this, Tela_Home.class);
+            Intent intent = new Intent(MainActivity.this, HomeLista.class);
             startActivity(intent);
             finish();
 
