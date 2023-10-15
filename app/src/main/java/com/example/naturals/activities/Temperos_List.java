@@ -7,10 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.naturals.R;
-import com.example.naturals.adapter.ChasAdapter;
 import com.example.naturals.adapter.TemperosAdapter;
 import com.example.naturals.databinding.ActivityListaBinding;
-import com.example.naturals.modelo_de_dados.Chas;
 import com.example.naturals.modelo_de_dados.Temperos;
 
 import java.util.ArrayList;

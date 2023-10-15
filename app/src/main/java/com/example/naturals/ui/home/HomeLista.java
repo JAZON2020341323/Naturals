@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.naturals.R;
-import com.example.naturals.adapter.HomeHorAdapter;
 import com.example.naturals.modelo_de_dados.HomerHorModel;
 
 import java.util.ArrayList;
