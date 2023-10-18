@@ -11,7 +11,7 @@ public class Tela_Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_home);
+        setContentView(R.layout.fragment_home);
 
 
     }

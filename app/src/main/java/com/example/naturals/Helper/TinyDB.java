@@ -32,7 +32,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 
-import com.example.naturals.Domain.PopularDomain;
+import com.example.naturals.modelo_de_dados.PopularDomain;
 import com.google.gson.Gson;
 
 import java.io.File;

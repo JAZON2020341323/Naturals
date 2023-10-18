@@ -3,7 +3,8 @@ package com.example.naturals.Helper;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.naturals.Domain.PopularDomain;
+
+import com.example.naturals.modelo_de_dados.PopularDomain;
 
 import java.util.ArrayList;
 
@@ -34,7 +35,7 @@ public class ManagmentCart {
             listPop.add(item);
         }
         tinyDB.putListObject("CartList", listPop);
-        Toast.makeText(context, "Added to your Cart", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Adicionado ao Carrinho", Toast.LENGTH_SHORT).show();
     }
 
     public ArrayList<PopularDomain> getListCart() {
