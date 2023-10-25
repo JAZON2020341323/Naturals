@@ -45,14 +45,13 @@ public class PopularDomain implements Serializable {
     }
 
     public String getPicUrl() {
+
         return picUrl;
     }
 
-    public void setPicUrl(String picUrl) {
-        this.picUrl = picUrl;
-    }
 
     public int getReview() {
+
         return review;
     }
 

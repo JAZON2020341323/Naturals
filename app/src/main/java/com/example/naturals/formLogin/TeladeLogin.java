@@ -44,13 +44,11 @@ public class TeladeLogin extends AppCompatActivity {
 
 
 
-
         button_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 receberDados();
                 logar();
-                checkCurrentUser();
 
 
 
@@ -59,20 +57,6 @@ public class TeladeLogin extends AppCompatActivity {
 
 
     }
-
-    public void checkCurrentUser() {
-        // [START check_current_user]
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            // User is signed in
-        } else {
-            // No user is signed in
-
-        }
-    }
-
-
-
 
     private void logar() {
         mAuth.signInWithEmailAndPassword(u.getEmail(), u.getSenha())
@@ -117,5 +101,4 @@ public class TeladeLogin extends AppCompatActivity {
 
     private void reload() {
     }
-
 }

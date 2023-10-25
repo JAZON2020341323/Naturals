@@ -37,7 +37,7 @@ public class PopularListAdapter extends RecyclerView.Adapter<PopularListAdapter.
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
         holder.titleTxt.setText(items.get(position).getTitle());
-        holder.feeTxt.setText("$" + items.get(position).getPrice());
+        holder.feeTxt.setText("R$" + items.get(position).getPrice());
         holder.ScoreTxt.setText("" + items.get(position).getScore());
 
         int drawable = holder.itemView.getResources().getIdentifier(items.get(position).getPicUrl(),
