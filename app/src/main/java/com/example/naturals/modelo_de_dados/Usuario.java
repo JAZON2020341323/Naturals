@@ -1,6 +1,5 @@
 package com.example.naturals.modelo_de_dados;
 
-import com.example.naturals.Produto_descricao.config.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 
 public class Usuario {

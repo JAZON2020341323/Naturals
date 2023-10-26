@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.example.naturals.Activity.MainActivity;
+import com.example.naturals.Activity.activity.MainActivity;
 import com.example.naturals.R;
 import com.example.naturals.formCadastro.TeladeCadastro;
 import com.example.naturals.modelo_de_dados.Usuario;

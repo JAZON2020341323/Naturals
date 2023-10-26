@@ -1,4 +1,4 @@
-package com.example.naturals.Activity;
+package com.example.naturals.Activity.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,11 +13,10 @@ import com.example.naturals.Activity.activities.ActivityLista;
 import com.example.naturals.Activity.activities.Chas_Lista;
 import com.example.naturals.Activity.activities.Graos_Lista;
 import com.example.naturals.Activity.activities.Temperos_List;
-import com.example.naturals.modelo_de_dados.Capsulas;
 import com.example.naturals.modelo_de_dados.PopularDomain;
 import com.example.naturals.R;
 import com.example.naturals.adapter.PopularListAdapter;
-import com.example.naturals.teladeperfil.activity_telade_perfil;
+import com.example.naturals.teladeperfil.perfil.activity_telade_perfil;
 
 import java.util.ArrayList;
 

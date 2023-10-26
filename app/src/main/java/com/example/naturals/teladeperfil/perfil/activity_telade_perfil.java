@@ -1,4 +1,4 @@
-package com.example.naturals.teladeperfil;
+package com.example.naturals.teladeperfil.perfil;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.example.naturals.adapter.perfil;
+package com.example.naturals.perfil;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
