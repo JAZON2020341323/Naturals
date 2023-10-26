@@ -32,7 +32,7 @@
             android:name=".Activity.activities.Temperos_List"
             android:exported="false" />
         <activity
-            android:name=".Activity.activities.MainActivity1" />
+            android:name=".Activity.activity.MainActivity" />
 
         <activity
             android:name=".formCadastro.TeladeCadastro"
@@ -53,7 +53,7 @@
             android:exported="false"/>
 
         <activity
-            android:name=".Activity.activity.MainActivity"
+            android:name=".Activity.activities.MainActivity1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
