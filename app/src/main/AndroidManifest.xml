@@ -19,7 +19,7 @@
             android:name=".Activity.activities.Chas_Lista"
             android:exported="false" />
         <activity
-            android:name=".Activity.activities.ActivityLista"
+            android:name=".Activity.activities.CapsulasLista"
             android:exported="false" />
         <activity
             android:name=".teladeperfil.activity_telade_perfil"
@@ -44,7 +44,7 @@
             android:name=".formLogin.TeladeLogin"
             android:exported="false" />
         <activity
-            android:name=".Activity.CartActivity"
+            android:name=".Activity.ActivityCarrinho"
             android:exported="false" />
         <activity
             android:name=".Activity.DetailActivity"

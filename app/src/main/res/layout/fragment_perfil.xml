@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green"
-    tools:context=".adapter.perfil.PerfilFragment">
+    tools:context=".perfil.PerfilFragment">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/green"
-        tools:context=".adapter.perfil.PerfilFragment">
+        tools:context=".perfil.PerfilFragment">
 
         <LinearLayout
             android:layout_width="match_parent"

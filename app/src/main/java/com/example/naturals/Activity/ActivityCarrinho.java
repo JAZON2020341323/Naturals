@@ -18,7 +18,7 @@ import com.example.naturals.R;
 import com.example.naturals.adapter.CartListAdapter;
 
 
-public class CartActivity extends AppCompatActivity {
+public class ActivityCarrinho extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerView;
     private ManagmentCart managmentCart;
@@ -30,7 +30,7 @@ public class CartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
+        setContentView(R.layout.activity_carrinho);
 
         managmentCart = new ManagmentCart(this);
 
@@ -69,10 +69,10 @@ public class CartActivity extends AppCompatActivity {
         double total = Math.round((managmentCart.getTotalFee() + tax + delivery) * 100) / 100;
         double itemTotal = Math.round(managmentCart.getTotalFee() * 100) / 100;
 
-        totalFeeTxt.setText("$" + itemTotal);
-        taxTxt.setText("$" + tax);
-        deliveryTxt.setText("$" + delivery);
-        totalTxt.setText("$" + total);
+        totalFeeTxt.setText("R$ " + itemTotal);
+        taxTxt.setText("R$ " + tax);
+        deliveryTxt.setText("R$ " + delivery);
+        totalTxt.setText("R$ " + total);
     }
 
     private void setVariavle() {
@@ -92,7 +92,7 @@ public class CartActivity extends AppCompatActivity {
     }
 
     public void btnFinalizarCompra(View view){
-        Intent in = new Intent(CartActivity.this, ActivityPagamento.class);
+        Intent in = new Intent(ActivityCarrinho.this, ActivityPagamento.class);
         startActivity(in);
     }
 }

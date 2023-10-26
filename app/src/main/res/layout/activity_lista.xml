@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/green"
 
-    tools:context=".Activity.activities.ActivityLista">
+    tools:context=".Activity.activities.CapsulasLista">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewFood"

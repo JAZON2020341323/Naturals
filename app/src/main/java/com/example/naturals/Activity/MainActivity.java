@@ -9,11 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.example.naturals.Activity.activities.ActivityLista;
+import com.example.naturals.Activity.activities.CapsulasLista;
 import com.example.naturals.Activity.activities.Chas_Lista;
 import com.example.naturals.Activity.activities.Graos_Lista;
 import com.example.naturals.Activity.activities.Temperos_List;
-import com.example.naturals.modelo_de_dados.Capsulas;
 import com.example.naturals.modelo_de_dados.PopularDomain;
 import com.example.naturals.R;
 import com.example.naturals.adapter.PopularListAdapter;
@@ -38,56 +37,31 @@ public class MainActivity extends AppCompatActivity {
     private void bottom_navigation() {
         LinearLayout cartBtn = findViewById(R.id.cartBtn);
 
-        cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CartActivity.class)));
+        cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ActivityCarrinho.class)));
     }
 
     private void initRecyclerview() {
         ArrayList<PopularDomain> items = new ArrayList<>();
-        items.add(new PopularDomain("MacBook Pro 13 M2 chip", "Discover the new MacBook Pro 13 featuring the\n" +
-                " powerful M2 chip. This cutting-edge laptop\n" +
-                " redefines performance and portability. With its \n" +
-                "sleek design and advanced technology, the\n" +
-                " MacBook Pro 13 M2 chip is your ultimate\n" +
-                " companion for productivity, creativity, and\n" +
-                " entertainment. Experience seamless multitasking, \n" +
-                "stunning visuals on the Retina display, and\n" +
-                " enhanced security with Touch ID. Take your\n" +
-                " computing experience to the next level with the \n" +
-                "MacBook Pro 13 M2 chip.", "pic", 15, 4, 500));
-        items.add(new PopularDomain("Ps-5 Digital", "Discover the new MacBook Pro 13 featuring the\n" +
-                " powerful M2 chip. This cutting-edge laptop\n" +
-                " redefines performance and portability. With its \n" +
-                "sleek design and advanced technology, the\n" +
-                " MacBook Pro 13 M2 chip is your ultimate\n" +
-                " companion for productivity, creativity, and\n" +
-                " entertainment. Experience seamless multitasking, \n" +
-                "stunning visuals on the Retina display, and\n" +
-                " enhanced security with Touch ID. Take your\n" +
-                " computing experience to the next level with the \n" +
-                "MacBook Pro 13 M2 chip.", "pic3", 10, 4.5, 450));
-        items.add(new PopularDomain("IPhone 14", "Discover the new MacBook Pro 13 featuring the\n" +
-                " powerful M2 chip. This cutting-edge laptop\n" +
-                " redefines performance and portability. With its \n" +
-                "sleek design and advanced technology, the\n" +
-                " MacBook Pro 13 M2 chip is your ultimate\n" +
-                " companion for productivity, creativity, and\n" +
-                " entertainment. Experience seamless multitasking, \n" +
-                "stunning visuals on the Retina display, and\n" +
-                " enhanced security with Touch ID. Take your\n" +
-                " computing experience to the next level with the \n" +
-                "MacBook Pro 13 M2 chip.", "pic2", 13, 4.2, 800));
+        items.add(new PopularDomain("Amora Miura", "\n" +
+                " A Amora Miura em cápsulas da Unilife contém em sua composição Amora miúra, ácido ascórbico (vitamina C), zinco, quelato e selenometionina. Cápsula: gelatina vegetariana e água.Sugere-se a ingestão de 3 cápsulas ao dia, após a refeição. Ingerir com líquido. Consumir este produto conforme recomendação de ingestão diária constante na embalagem.\n" +
 
-        items.add(new PopularDomain("Capsula", "Discover the new MacBook Pro 13 featuring the\n" +
-                " powerful M2 chip. This cutting-edge laptop\n" +
-                " redefines performance and portability. With its \n" +
-                "sleek design and advanced technology, the\n" +
-                " MacBook Pro 13 M2 chip is your ultimate\n" +
-                " companion for productivity, creativity, and\n" +
-                " entertainment. Experience seamless multitasking, \n" +
-                "stunning visuals on the Retina display, and\n" +
-                " enhanced security with Touch ID. Take your\n" +
-                " computing experience to the next level with the \n" +
-                "MacBook Pro 13 M2 chip.", "capsula1", 13, 4.2, 800));
+                "", "capsula3", 15, 4, 43.00));
+
+        items.add(new PopularDomain("Açafrão 60 cápsulas", "\n" +
+                "O açafrão (cúrcuma) em cápsulas da Unilife contém em sua composição cenoura, urucum e beterraba.\n" +
+
+                "", "capsula2", 15, 4, 43.00));
+
+        items.add(new PopularDomain("Amendoins 100g", "\n" +
+                "Os amendoins são uma boa fonte de proteína vegetal. A proteína é essencial para a construção e reparo dos tecidos do corpo, além de contribuir para a sensação de saciedade.Contém principalmente gorduras insaturadas, incluindo ácidos graxos monoinsaturados e poliinsaturados, que são benéficos para a saúde do coração. Contém também antioxidantes, como vitamina E e resveratrol, que ajudam a combater os radicais livres no corpo e podem contribuir para a saúde celular e vários outros benefícios." +
+                "\n" +
+
+                "", "grao1", 15, 4, 2.00));
+
+        items.add(new PopularDomain("Grão de bico 100g", "\n" +
+                "O açafrão (cúrcuma) em cápsulas da Unilife contém em sua composição cenoura, urucum e beterraba.\n" +
+
+                "", "grao2", 15, 4, 1.98));
 
         recyclerViewPupolar = findViewById(R.id.view1);
         recyclerViewPupolar.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -107,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnCapsula (View view){
-        Intent in = new Intent(MainActivity.this, ActivityLista.class);
+        Intent in = new Intent(MainActivity.this, CapsulasLista.class);
         startActivity(in);
     }
 

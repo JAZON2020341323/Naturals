@@ -17,7 +17,7 @@ import com.example.naturals.modelo_de_dados.Capsulas;
 
 import java.util.ArrayList;
 
-public class ActivityLista extends AppCompatActivity {
+public class CapsulasLista extends AppCompatActivity {
     private ActivityListaBinding binding;
     private CapsulasAdapter capsulasAdapter;
     private ArrayList<Capsulas> capsulasList = new ArrayList<>();

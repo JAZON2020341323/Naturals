@@ -1,4 +1,4 @@
-package com.example.naturals.Produto_descricao.config;
+package com.example.naturals.modelo_de_dados;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
