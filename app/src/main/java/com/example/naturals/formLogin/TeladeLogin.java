@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.naturals.Activity.MainActivity;
 import com.example.naturals.R;
 import com.example.naturals.formCadastro.TeladeCadastro;
@@ -44,11 +43,13 @@ public class TeladeLogin extends AppCompatActivity {
 
 
 
+
         button_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 receberDados();
                 logar();
+                checkCurrentUser();
 
 
 
@@ -58,6 +59,20 @@ public class TeladeLogin extends AppCompatActivity {
 
     }
 
+    public void checkCurrentUser() {
+        // [START check_current_user]
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // User is signed in
+        } else {
+            // No user is signed in
+
+        }
+    }
+
+
+
+
     private void logar() {
         mAuth.signInWithEmailAndPassword(u.getEmail(), u.getSenha())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -66,7 +81,10 @@ public class TeladeLogin extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
+
                             startActivity(new Intent(TeladeLogin.this, MainActivity.class));
+                 startActivity(new Intent(TeladeLogin.this, MainActivity.class));
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(TeladeLogin.this, "Autenticação falhou.",
@@ -89,16 +107,5 @@ public class TeladeLogin extends AppCompatActivity {
         startActivity(in);
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            reload();
-        }
-    }
 
-    private void reload() {
-    }
 }
