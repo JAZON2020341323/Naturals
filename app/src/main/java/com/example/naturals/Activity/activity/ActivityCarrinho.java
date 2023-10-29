@@ -18,7 +18,7 @@ import com.example.naturals.R;
 import com.example.naturals.adapter.CartListAdapter;
 
 
-public class CartActivity extends AppCompatActivity {
+public class ActivityCarrinho extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerView;
     private ManagmentCart managmentCart;
@@ -30,7 +30,7 @@ public class CartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
+        setContentView(R.layout.activity_carrinho);
 
         managmentCart = new ManagmentCart(this);
 
@@ -92,7 +92,7 @@ public class CartActivity extends AppCompatActivity {
     }
 
     public void btnFinalizarCompra(View view){
-        Intent in = new Intent(CartActivity.this, ActivityPagamento.class);
+        Intent in = new Intent(ActivityCarrinho.this, ActivityPagamento.class);
         startActivity(in);
     }
 }

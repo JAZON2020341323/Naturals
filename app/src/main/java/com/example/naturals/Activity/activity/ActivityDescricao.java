@@ -12,7 +12,7 @@ import com.example.naturals.modelo_de_dados.PopularDomain;
 import com.example.naturals.Helper.ManagmentCart;
 import com.example.naturals.R;
 
-public class DetailActivity extends AppCompatActivity {
+public class ActivityDescricao extends AppCompatActivity {
     private Button addToCartBtn;
     private TextView titleTxt, feeTxt, descriptionTxt, reviewTxt, scoreTxt;
     private ImageView picItem, backBtn;
@@ -23,7 +23,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        setContentView(R.layout.activity_descricao);
 
         managmentCart = new ManagmentCart(this);
 

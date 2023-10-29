@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void bottom_navigation() {
         LinearLayout cartBtn = findViewById(R.id.cartBtn);
 
-        cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CartActivity.class)));
+        cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ActivityCarrinho.class)));
     }
 
     private void initRecyclerview() {
@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(in);
     }
 
-    public void btnPerfil (View view){
+    public void btnPerfil (View v
+                           iew){
         Intent in = new Intent(MainActivity.this, activity_telade_perfil.class);
         startActivity(in);
     }
