@@ -1,4 +1,4 @@
-package com.example.naturals.Activity.activity.activities;
+package com.example.naturals.Activity.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

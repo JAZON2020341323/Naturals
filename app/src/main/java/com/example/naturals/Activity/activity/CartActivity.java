@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.example.naturals.Activity.activity.activities.ActivityPagamento;
+import com.example.naturals.Activity.activities.ActivityPagamento;
 import com.example.naturals.Helper.ChangeNumberItemsListener;
 import com.example.naturals.Helper.ManagmentCart;
 import com.example.naturals.R;

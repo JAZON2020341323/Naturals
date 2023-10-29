@@ -1,4 +1,4 @@
-package com.example.naturals.Activity.activity.activities;
+package com.example.naturals.Activity.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
