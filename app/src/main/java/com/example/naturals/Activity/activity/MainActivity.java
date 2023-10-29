@@ -42,51 +42,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRecyclerview() {
         ArrayList<PopularDomain> items = new ArrayList<>();
-        items.add(new PopularDomain("MacBook Pro 13 M2 chip", "Discover the new MacBook Pro 13 featuring the\n" +
-                " powerful M2 chip. This cutting-edge laptop\n" +
-                " redefines performance and portability. With its \n" +
-                "sleek design and advanced technology, the\n" +
-                " MacBook Pro 13 M2 chip is your ultimate\n" +
-                " companion for productivity, creativity, and\n" +
-                " entertainment. Experience seamless multitasking, \n" +
-                "stunning visuals on the Retina display, and\n" +
-                " enhanced security with Touch ID. Take your\n" +
-                " computing experience to the next level with the \n" +
-                "MacBook Pro 13 M2 chip.", "pic", 15, 4, 500));
-        items.add(new PopularDomain("Ps-5 Digital", "Discover the new MacBook Pro 13 featuring the\n" +
-                " powerful M2 chip. This cutting-edge laptop\n" +
-                " redefines performance and portability. With its \n" +
-                "sleek design and advanced technology, the\n" +
-                " MacBook Pro 13 M2 chip is your ultimate\n" +
-                " companion for productivity, creativity, and\n" +
-                " entertainment. Experience seamless multitasking, \n" +
-                "stunning visuals on the Retina display, and\n" +
-                " enhanced security with Touch ID. Take your\n" +
-                " computing experience to the next level with the \n" +
-                "MacBook Pro 13 M2 chip.", "pic3", 10, 4.5, 450));
-        items.add(new PopularDomain("IPhone 14", "Discover the new MacBook Pro 13 featuring the\n" +
-                " powerful M2 chip. This cutting-edge laptop\n" +
-                " redefines performance and portability. With its \n" +
-                "sleek design and advanced technology, the\n" +
-                " MacBook Pro 13 M2 chip is your ultimate\n" +
-                " companion for productivity, creativity, and\n" +
-                " entertainment. Experience seamless multitasking, \n" +
-                "stunning visuals on the Retina display, and\n" +
-                " enhanced security with Touch ID. Take your\n" +
-                " computing experience to the next level with the \n" +
-                "MacBook Pro 13 M2 chip.", "pic2", 13, 4.2, 800));
+        items.add(new PopularDomain("Café 100g", "O café é conhecido por seu teor de cafeína, um estimulante natural que pode ajudar a melhorar o estado de alerta, a concentração e a função cognitiva.A cafeína presente no café pode ter efeitos positivos no humor, podendo ajudar a reduzir a sensação de fadiga e melhorar o ânimo. Pode aumentar temporariamente a capacidade física, ajudando a melhorar o desempenho em atividades físicas. Atuando também na prevenção de doenças neurodegenerativas, saúde cardiovascular, são antioxidantes, prevenção de diabetes tipo 2 entre outros.",
+                "grao5", 10, 4.5,4.00 ));
+        items.add(new PopularDomain("Alecrim 100g", "Experimente este Alecrim, mais sabor para suas receitas. Ideal para o preparo de: aves, carneiros, peixes, batatas, omeletes, molhos, frutos do mar e pães. As folhas de alecrim perfumam os grelhados e devem ser adicionadas inteiras ou picadas no final do cozimento para evitar a evaporação dos seus óleos aromáticos, acrescentam um sabor delicioso à maionese.\n",
+                "tempero10", 13, 4.2,4.88));
 
-        items.add(new PopularDomain("Capsula", "Discover the new MacBook Pro 13 featuring the\n" +
-                " powerful M2 chip. This cutting-edge laptop\n" +
-                " redefines performance and portability. With its \n" +
-                "sleek design and advanced technology, the\n" +
-                " MacBook Pro 13 M2 chip is your ultimate\n" +
-                " companion for productivity, creativity, and\n" +
-                " entertainment. Experience seamless multitasking, \n" +
-                "stunning visuals on the Retina display, and\n" +
-                " enhanced security with Touch ID. Take your\n" +
-                " computing experience to the next level with the \n" +
-                "MacBook Pro 13 M2 chip.", "capsula1", 13, 4.2, 800));
+        items.add(new PopularDomain("Goldenskin Complex", "O Goldenskin Complex é um suplemento de Betacaroteno, Licopeno, Tirosina, Riboflavina, Vitaminas A, C, D e E, Selênio, Zinco e Cobre. Adultos (maiores de 19 anos): Ingerir 2 cápsulas ao dia.\n",
+                "capsula9", 13, 4.2, 45.20));
 
         recyclerViewPupolar = findViewById(R.id.view1);
         recyclerViewPupolar.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
