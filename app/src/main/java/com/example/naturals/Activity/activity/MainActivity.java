@@ -9,10 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.example.naturals.Activity.activities.ActivityLista;
-import com.example.naturals.Activity.activities.Chas_Lista;
-import com.example.naturals.Activity.activities.Graos_Lista;
-import com.example.naturals.Activity.activities.Temperos_List;
+import com.example.naturals.Activity.activity.activities.ActivityLista;
+import com.example.naturals.Activity.activity.activities.Chas_Lista;
+import com.example.naturals.Activity.activity.activities.Graos_Lista;
+import com.example.naturals.Activity.activity.activities.Temperos_List;
 import com.example.naturals.adapter.PopularListAdapter;
 import com.example.naturals.modelo_de_dados.PopularDomain;
 import com.example.naturals.R;

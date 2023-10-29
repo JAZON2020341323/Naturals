@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
-import com.example.naturals.Activity.activities.DetailActivity;
+import com.example.naturals.Activity.activity.activities.DetailActivity;
 import com.example.naturals.modelo_de_dados.PopularDomain;
 import com.example.naturals.R;
 import java.util.ArrayList;
