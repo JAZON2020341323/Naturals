@@ -62,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(in);
     }
 
-    public void btnPerfil (View v
-                           iew){
+    public void btnPerfil (View view){
         Intent in = new Intent(MainActivity.this, activity_telade_perfil.class);
         startActivity(in);
     }
