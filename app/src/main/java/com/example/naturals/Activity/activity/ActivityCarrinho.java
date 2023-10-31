@@ -69,10 +69,10 @@ public class ActivityCarrinho extends AppCompatActivity {
         double total = Math.round((managmentCart.getTotalFee() + tax + delivery) * 100) / 100;
         double itemTotal = Math.round(managmentCart.getTotalFee() * 100) / 100;
 
-        totalFeeTxt.setText("$" + itemTotal);
-        taxTxt.setText("$" + tax);
-        deliveryTxt.setText("$" + delivery);
-        totalTxt.setText("$" + total);
+        totalFeeTxt.setText("R$" + itemTotal);
+        taxTxt.setText("R$" + tax);
+        deliveryTxt.setText("R$" + delivery);
+        totalTxt.setText("R$" + total);
     }
 
     private void setVariavle() {
