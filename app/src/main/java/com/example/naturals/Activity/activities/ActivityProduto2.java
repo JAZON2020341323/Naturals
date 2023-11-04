@@ -1,4 +1,4 @@
-package com.example.naturals.teladeperfil.perfil;
+package com.example.naturals.Activity.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.naturals.R;
 
-public class activity_editar_perfil extends AppCompatActivity {
+public class ActivityProduto2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar_perfil);
+        setContentView(R.layout.cadastro_produto2);
     }
 }

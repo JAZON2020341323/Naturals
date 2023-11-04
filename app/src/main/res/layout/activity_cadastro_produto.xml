@@ -1,0 +1,50 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Botão para selecionar a categoria -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECIONAR CATEGORIA"
+        android:onClick="selecionarCategoria"
+        android:layout_gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Produto" />
+
+    <EditText
+        android:id="@+id/editTextValor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor do Produto" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Imagem"
+        android:onClick="adicionarImagem"
+        android:layout_gravity="center"/>
+
+    <!-- Botão para cadastrar o produto -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CADASTRAR PRODUTO"
+        android:onClick="cadastrarProduto"
+        android:layout_gravity="center"/>
+
+    <Spinner
+        android:id="@+id/spinnerImagens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

@@ -42,8 +42,8 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(listItemSelected.get(position).getTitle());
-        holder.feeEachItem.setText("$" + listItemSelected.get(position).getPrice());
-        holder.totalEachItem.setText("$" + Math.round((listItemSelected.get(position).getNumberinCart() * listItemSelected.get(position).getPrice())));
+        holder.feeEachItem.setText("R$" + listItemSelected.get(position).getPrice());
+        holder.totalEachItem.setText("R$" + Math.round((listItemSelected.get(position).getNumberinCart() * listItemSelected.get(position).getPrice())));
         holder.num.setText(String.valueOf(listItemSelected.get(position).getNumberinCart()));
 
         int drawableResourceId = holder.itemView.getContext().getResources()

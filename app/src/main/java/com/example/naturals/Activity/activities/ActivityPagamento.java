@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.naturals.Activity.activity.MainActivity;
 import com.example.naturals.R;
 
 public class ActivityPagamento extends AppCompatActivity {

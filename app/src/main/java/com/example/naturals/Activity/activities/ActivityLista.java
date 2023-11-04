@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,8 +14,6 @@ import com.example.naturals.R;
 import com.example.naturals.adapter.CapsulasAdapter;
 import com.example.naturals.databinding.ActivityListaBinding;
 import com.example.naturals.modelo_de_dados.Capsulas;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -32,10 +29,6 @@ public class ActivityLista extends AppCompatActivity {
     private TextView txtCapsulasName, txtCapsulaDescription, txtPrice;
     private Button addToCartBtn;
     private ImageView imageView4;
-
-    private ImageButton fvrt_btn;
-    DatabaseReference favouriteref;
-    FirebaseDatabase database= FirebaseDatabase.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
-import com.example.naturals.Activity.activity.ActivityDescricao;
+import com.example.naturals.Activity.activities.DescricaoActivity;
 import com.example.naturals.modelo_de_dados.PopularDomain;
 import com.example.naturals.R;
 import java.util.ArrayList;
@@ -49,7 +49,7 @@ public class PopularListAdapter extends RecyclerView.Adapter<PopularListAdapter.
                 .into(holder.pic);
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(holder.itemView.getContext(), ActivityDescricao.class);
+            Intent intent = new Intent(holder.itemView.getContext(), DescricaoActivity.class);
             intent.putExtra("object", items.get(position));
             holder.itemView.getContext().startActivity(intent);
         });
