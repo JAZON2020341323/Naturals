@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="399dp"
+        android:layout_height="105dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logonaturals" />
+
+    <TextView
+        android:id="@+id/adicionar_produto"
+        android:layout_width="230dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:text="Selecione a categoria"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/retânguloVerde"
+        android:layout_width="390dp"
+        android:layout_height="380dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/retangulo_cadastro_produto"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adicionar_produto" />
+
+    <View
+        android:id="@+id/viewItem1"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/retangulo_item"
+        app:layout_constraintStart_toStartOf="@+id/retânguloVerde"
+        app:layout_constraintTop_toTopOf="@+id/retânguloVerde" />
+
+    <Button
+        android:id="@+id/btnCapsula"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:onClick="Capsula"
+        app:layout_constraintBottom_toBottomOf="@+id/viewItem1"
+        app:layout_constraintEnd_toEndOf="@+id/viewItem1"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="@+id/viewItem1"
+        app:layout_constraintTop_toTopOf="@+id/viewItem1"
+        android:background="@drawable/vetorencapsulado"/>
+
+    <View
+        android:id="@+id/viewItem2"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/retangulo_item"
+        app:layout_constraintEnd_toEndOf="@+id/retânguloVerde"
+        app:layout_constraintTop_toTopOf="@+id/retânguloVerde" />
+
+    <ImageView
+        android:id="@+id/imgViewGrao"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:onClick="Grao"
+        android:src="@drawable/grao_vetor"
+        app:layout_constraintBottom_toBottomOf="@+id/viewItem2"
+        app:layout_constraintEnd_toEndOf="@+id/viewItem2"
+        app:layout_constraintStart_toStartOf="@+id/viewItem2"
+        app:layout_constraintTop_toTopOf="@+id/viewItem2" />
+
+    <View
+        android:id="@+id/viewItem3"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/retangulo_item"
+        app:layout_constraintBottom_toBottomOf="@+id/retânguloVerde"
+        app:layout_constraintStart_toStartOf="@+id/retânguloVerde"
+        app:layout_constraintTop_toBottomOf="@+id/cápsula"
+        app:layout_constraintVertical_bias="0.508"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imgViewTempero"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:onClick="Tempero"
+        android:src="@drawable/tempero_vetor"
+        app:layout_constraintBottom_toBottomOf="@+id/viewItem3"
+        app:layout_constraintEnd_toEndOf="@+id/viewItem3"
+        app:layout_constraintStart_toStartOf="@+id/viewItem3"
+        app:layout_constraintTop_toTopOf="@+id/viewItem3" />
+
+    <View
+        android:id="@+id/viewItem4"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/retangulo_item"
+        app:layout_constraintBottom_toBottomOf="@+id/retânguloVerde"
+        app:layout_constraintEnd_toEndOf="@+id/retânguloVerde"
+        app:layout_constraintStart_toEndOf="@+id/viewItem3"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.508"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imgViewCha"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:onClick="Cha"
+        android:src="@drawable/chas_vetor"
+        app:layout_constraintBottom_toBottomOf="@+id/viewItem4"
+        app:layout_constraintEnd_toEndOf="@+id/viewItem4"
+        app:layout_constraintStart_toStartOf="@+id/viewItem4"
+        app:layout_constraintTop_toTopOf="@+id/viewItem4" />
+
+    <TextView
+        android:id="@+id/cápsula"
+        android:layout_width="102dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="10dp"
+        android:text="Cápsulas"
+        style="@style/textStyleBold"
+        android:textColor="#FAFAFA"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewItem1"
+        app:layout_constraintStart_toStartOf="@+id/viewItem1"
+        app:layout_constraintTop_toBottomOf="@+id/viewItem1" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Grãos"
+        style="@style/textStyleBold"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewItem2"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toStartOf="@+id/viewItem2"
+        app:layout_constraintTop_toBottomOf="@+id/viewItem2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/textStyleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Temperos"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/retânguloVerde"
+        app:layout_constraintEnd_toEndOf="@+id/viewItem3"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/viewItem3"
+        app:layout_constraintTop_toBottomOf="@+id/viewItem3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/textStyleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="16dp"
+        android:text="Chás"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/retânguloVerde"
+        app:layout_constraintEnd_toEndOf="@+id/viewItem4"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/viewItem4"
+        app:layout_constraintTop_toBottomOf="@+id/viewItem4"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
