@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.naturals.Activity.activities.MainActivity;
 import com.example.naturals.R;
@@ -28,6 +29,8 @@ public class TeladeLogin extends AppCompatActivity {
     private EditText editTextSenha;
     private Button button_entrar;
     private ProgressBar progressBar2;
+    private FirebaseAuth auth;
+    private Button btnResetsenha;
 
     private Button button_aindanaoeusuario;
     String[] mensagens = {"Preencha todos os campos!", "Login Efetuado com sucesso"};
@@ -38,6 +41,18 @@ public class TeladeLogin extends AppCompatActivity {
         setContentView(R.layout.activity_telade_login);
 
         IniciarComponentes();
+
+        btnResetsenha = findViewById(R.id.btnResetsenha);
+
+        auth = FirebaseAuth.getInstance();
+
+        btnResetsenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alterarSenha();
+            }
+        });
+
 
 
         button_entrar.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +75,28 @@ public class TeladeLogin extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void alterarSenha() {
+        String email = editTextEmail.getText().toString().trim();
+
+        if (email.isEmpty()) {
+            Toast.makeText(TeladeLogin.this, "Por favor, insira seu e-mail", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Envia um e-mail de redefinição de senha
+        auth.sendPasswordResetEmail(email)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(TeladeLogin.this, "Um e-mail de redefinição de senha foi enviado para o seu endereço de e-mail.", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(TeladeLogin.this, "Erro ao enviar o e-mail. Verifique seu endereço de e-mail.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
 
@@ -124,7 +161,6 @@ public class TeladeLogin extends AppCompatActivity {
         progressBar2 = findViewById(R.id.progressBar2);
 
     }
-
 
 
     public void AindaNaoEUsuario(View view) {

@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="@+id/view7"
         app:layout_constraintStart_toStartOf="@+id/view7"
         app:layout_constraintTop_toTopOf="@+id/view7"
-        app:srcCompat="@drawable/pic1" />
+        app:srcCompat="@drawable/capsula2" />
 
     <TextView
         android:id="@+id/titleTxt"
