@@ -3,7 +3,20 @@ package com.example.naturals.teladeperfil;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.example.naturals.R;
+import com.example.naturals.formLogin.TeladeLogin;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.UploadTask;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -20,19 +33,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.naturals.formLogin.TeladeLogin;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -42,7 +42,6 @@ public class activity_telade_perfil extends AppCompatActivity {
     private Button bt_deslogar;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String usuarioID;
-    private Button bt_editar;
     private Uri selectedImageUri;
 
     private static final int PICK_IMAGE_REQUEST = 1;
@@ -74,15 +73,8 @@ public class activity_telade_perfil extends AppCompatActivity {
             }
         });
 
-        bt_editar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(activity_telade_perfil.this, activity_editar_perfil.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
+        bt_deslogar = findViewById(R.id.bt_deslogar);
         bt_deslogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,68 +140,112 @@ public class activity_telade_perfil extends AppCompatActivity {
     private Bitmap getCircularBitmap(Bitmap srcBitmap) {
         int width = srcBitmap.getWidth();
         int height = srcBitmap.getHeight();
-        Bitmap outputBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+
+        int size = Math.min(width, height);
+        int x = (width - size) / 2;
+        int y = (height - size) / 2;
+
+        Bitmap croppedBitmap = Bitmap.createBitmap(srcBitmap, x, y, size, size);
+        if (croppedBitmap != srcBitmap) {
+            srcBitmap.recycle(); // Liberar a memória da imagem original
+        }
+
+        Bitmap outputBitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
+
         Canvas canvas = new Canvas(outputBitmap);
-        BitmapShader shader = new BitmapShader(srcBitmap, BitmapShader.TileMode.CLAMP, BitmapShader.TileMode.CLAMP);
+        BitmapShader shader = new BitmapShader(croppedBitmap, BitmapShader.TileMode.CLAMP, BitmapShader.TileMode.CLAMP);
+
         Paint paint = new Paint();
         paint.setShader(shader);
         paint.setAntiAlias(true);
-        float radius = Math.min(width, height) / 2;
-        canvas.drawCircle(width / 2, height / 2, radius, paint);
+
+        float radius = size / 2f;
+        canvas.drawCircle(radius, radius, radius, paint);
+
         return outputBitmap;
     }
 
+
     private void uploadImageToFirebaseStorage(Uri imageUri) {
         if (imageUri != null) {
-            // Defina o nome do arquivo no Firebase Storage (pode ser o UID do usuário)
-            String fileName = FirebaseAuth.getInstance().getCurrentUser().getUid() + ".jpg";
-            StorageReference imageRef = storageRef.child("profile_images/" + fileName);
+            String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            final StorageReference imageRef = storageRef.child("profile_images/" + userId + ".jpg");
 
-            UploadTask uploadTask = imageRef.putFile(imageUri);
-            uploadTask.addOnSuccessListener(taskSnapshot -> {
-                // Imagem carregada com sucesso, obtenha a URL da imagem
-                imageRef.getDownloadUrl().addOnSuccessListener(downloadUri -> {
-                    // Salve a URL da imagem no banco de dados do Firebase
-                    String imageUrl = downloadUri.toString();
-                    saveImageURLToDatabase(imageUrl);
-                });
+            // Verifique se a imagem anterior existe e exclua-a
+            imageRef.getDownloadUrl().addOnSuccessListener(downloadUri -> {
+                // Se a URL da imagem anterior existir, exclua-a
+                String previousImageUrl = downloadUri.toString();
+                if (!previousImageUrl.isEmpty()) {
+                    // Exclua a imagem anterior
+                    FirebaseStorage.getInstance().getReferenceFromUrl(previousImageUrl).delete()
+                            .addOnSuccessListener(aVoid -> {
+                                // Após a exclusão bem-sucedida da imagem anterior, faça o upload da nova imagem
+                                UploadTask uploadTask = imageRef.putFile(imageUri);
+                                uploadTask.addOnSuccessListener(taskSnapshot -> {
+                                    // Imagem carregada com sucesso, obtenha a URL da nova imagem
+                                    imageRef.getDownloadUrl().addOnSuccessListener(newOnSuccessListener -> {
+                                        // Salve a URL da nova imagem no banco de dados do Firebase
+                                        String newImageUrl = newOnSuccessListener.toString();
+                                        saveImageURLToDatabase(newImageUrl);
+                                    });
+                                });
+                            });
+                } else {
+                    // Se não houver uma imagem anterior, faça o upload da nova imagem diretamente
+                    UploadTask uploadTask = imageRef.putFile(imageUri);
+                    uploadTask.addOnSuccessListener(taskSnapshot -> {
+                        // Imagem carregada com sucesso, obtenha a URL da nova imagem
+                        imageRef.getDownloadUrl().addOnSuccessListener(newOnSuccessListener -> {
+                            // Salve a URL da nova imagem no banco de dados do Firebase
+                            String newImageUrl = newOnSuccessListener.toString();
+                            saveImageURLToDatabase(newImageUrl);
+                        });
+                    });
+                }
             });
         }
     }
+
 
     private void saveImageURLToDatabase(String imageUrl) {
         // Obtém o UID do usuário atual
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         // Atualize o campo da imagem de perfil no banco de dados
-        usersRef.child(userId).child("imagemPerfil").setValue(imageUrl);
+        DocumentReference userRef = db.collection("usuario").document(userId);
+        userRef.update("profile_images", imageUrl);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-        String senha = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();;
         usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         DocumentReference documentReference = db.collection("usuario").document(usuarioID);
         documentReference.addSnapshotListener((documentSnapshot, error) -> {
             if (documentSnapshot != null) {
                 nome_usuario.setText(documentSnapshot.getString("nome"));
-                nomeusuario.setText(documentSnapshot.getString("nome"));
                 email_usuario.setText(email);
-                senha_usuario.setText(senha);
+
+                // Obtenha a URL da imagem do perfil do banco de dados
+                String imageUrl = documentSnapshot.getString("profile_images");
+
+                if (imageUrl != null) {
+                    // Use a biblioteca Glide para carregar a imagem no ImageView
+                    Glide.with(this)
+                            .load(imageUrl)
+                            .placeholder(R.drawable.placeholder_image) // Imagem de espaço reservado
+                            .into(imgFotoPerfil);
+                }
             }
         });
     }
 
     private void IniciarComponentes() {
-        nomeusuario = findViewById(R.id.text_view_show_welcome);
         nome_usuario = findViewById(R.id.textView_show_full_name);
         email_usuario = findViewById(R.id.textView_show_email);
-        senha_usuario = findViewById(R.id.textView_show_senha);
         bt_deslogar = findViewById(R.id.bt_deslogar);
-        bt_editar = findViewById(R.id.bt_editar);
     }
 }

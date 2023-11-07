@@ -27,33 +27,13 @@
                 android:id="@+id/imgFotoPerfil"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="129dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="95dp"
+                android:layout_marginEnd="132dp"
                 android:background="@drawable/perfil" />
-
-
-            <TextView
-                android:id="@+id/text_view_show_welcome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imgFotoPerfil"
-                android:layout_marginLeft="220dp"
-                android:layout_marginTop="-100dp"
-                android:hint="Carregando..."
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/bt_editar"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/text_view_show_welcome"
-                android:layout_alignEnd="@id/text_view_show_welcome"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="-24dp"
-                android:backgroundTint="#00B152"
-                android:text="Editar"
-                android:textSize="10sp" />
 
 
         </RelativeLayout>
@@ -119,44 +99,15 @@
                 android:background="@android:color/background_dark" />
 
             <ImageView
-                android:id="@+id/ic_senha"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_below="@+id/divider_name"
-                android:layout_marginTop="70dp"
-                android:background="@drawable/baseline_password_24" />
-
-            <TextView
-                android:id="@+id/textView_show_senha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/divider_email"
-                android:layout_alignStart="@id/ic_senha"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="20dp"
-                android:hint="Carregando..."
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <View
-                android:id="@id/divider_senha"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/textView_show_senha"
-                android:layout_marginTop="10dp"
-                android:background="@android:color/background_dark" />
-
-            <ImageView
                 android:id="@+id/ic_none"
                 android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_below="@+id/divider_senha"/>
+                android:layout_height="25dp" />
 
             <Button
                 android:id="@+id/bt_deslogar"
                 android:layout_width="155dp"
                 android:layout_height="52dp"
-                android:layout_alignParentStart="true"
+                android:layout_alignStart="@+id/divider_email"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"

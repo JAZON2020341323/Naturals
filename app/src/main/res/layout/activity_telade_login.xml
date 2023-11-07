@@ -66,7 +66,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
-        android:text="ESQUEU A SENHA?"
+        android:text="ESQUECEU A SENHA?"
         android:background="@drawable/orange_button_background"
         android:textColor="@color/white"
         android:textSize="18sp"
