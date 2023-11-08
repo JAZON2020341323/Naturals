@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.naturals.modelo_de_dados.CadastroProduto;
 import com.example.naturals.modelo_de_dados.PopularDomain;
 import com.example.naturals.R;
 import com.example.naturals.adapter.PopularListAdapter;
@@ -83,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnCha (View view){
         Intent in = new Intent(MainActivity.this, Chas_Lista.class);
+        startActivity(in);
+    }
+
+ public void btncadastrar (View view){
+        Intent in = new Intent(MainActivity.this, ActivityCadastroProduto.class);
         startActivity(in);
     }
 

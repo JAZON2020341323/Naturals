@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green">
+    android:background="@color/green"
+    tools:context=".Activity.activities.ActivityCadastroProduto">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -53,7 +54,7 @@
         app:layout_constraintStart_toStartOf="@+id/retânguloVerde"
         app:layout_constraintTop_toTopOf="@+id/retânguloVerde" />
 
-    <Button
+    <ImageView
         android:id="@+id/btnCapsula"
         android:layout_width="100dp"
         android:layout_height="90dp"

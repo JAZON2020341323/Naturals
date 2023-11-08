@@ -4,13 +4,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.example.naturals.R;
+import com.example.naturals.TelasdeEndereco.EditarEndereco;
 import com.example.naturals.formLogin.TeladeLogin;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.database.DatabaseReference;
@@ -37,7 +35,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.UUID;
 
 public class activity_telade_perfil extends AppCompatActivity {
 
@@ -49,6 +46,7 @@ public class activity_telade_perfil extends AppCompatActivity {
 
     private static final int PICK_IMAGE_REQUEST = 1;
     private ImageView imgFotoPerfil;
+    private ImageView btnEdndereco;
 
     // Declare as referências do Firebase Storage e do Realtime Database
     private FirebaseStorage storage;
@@ -271,5 +269,10 @@ public class activity_telade_perfil extends AppCompatActivity {
         nome_usuario = findViewById(R.id.textView_show_full_name);
         email_usuario = findViewById(R.id.textView_show_email);
         bt_deslogar = findViewById(R.id.bt_deslogar);
+    }
+
+    public void btnEdndereco(View view){
+        Intent in = new Intent(activity_telade_perfil.this, EditarEndereco.class);
+        startActivity(in);
     }
 }

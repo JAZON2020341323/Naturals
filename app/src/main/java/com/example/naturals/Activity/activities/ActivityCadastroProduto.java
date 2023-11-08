@@ -26,12 +26,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ActivityCadastroProduto extends AppCompatActivity {
 
-    private DatabaseReference databaseReference;
-    private EditText editTextNome, editTextValor;
-
-    private ArrayAdapter<CharSequence> adapter;
-    private String categoriaSelecionada = ""; // Armazenar a categoria selecionada
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
