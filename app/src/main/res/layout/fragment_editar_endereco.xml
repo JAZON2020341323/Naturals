@@ -39,28 +39,30 @@
             app:layout_constraintVertical_bias="0.615"
             tools:ignore="MissingConstraints" />
 
+
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/logonaturals" />
-
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="350dp"
-            android:layout_height="460dp"
+            android:layout_width="355dp"
+            android:layout_height="422dp"
             android:src="@drawable/rectangle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.622" />
+            app:layout_constraintVertical_bias="0.599" />
 
         <TextView
             android:id="@+id/textView13"
@@ -73,7 +75,7 @@
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/autoCompleteTextView2"
-            tools:layout_editor_absoluteX="52dp"
+            app:layout_constraintStart_toStartOf="@+id/autoCompleteTextView2"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -81,7 +83,6 @@
             style="@style/textStyleBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="239dp"
             android:text="TELEFONE"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/autoCompleteTextView3"
@@ -101,10 +102,10 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView8"
             app:layout_constraintEnd_toEndOf="@+id/imageView8"
-            app:layout_constraintHorizontal_bias="0.095"
-            app:layout_constraintStart_toStartOf="@+id/imageView8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextCep2"
             app:layout_constraintTop_toTopOf="@+id/imageView8"
-            app:layout_constraintVertical_bias="0.856" />
+            app:layout_constraintVertical_bias="0.885" />
 
         <TextView
             android:id="@+id/textView8"
@@ -120,18 +121,6 @@
             app:layout_constraintStart_toStartOf="@+id/editTextNomeCompleto"
             tools:layout_editor_absoluteY="428dp"
             tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-5dp"
-            android:text="Cidade"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintTop_toTopOf="@+id/imageView8"
-            tools:layout_editor_absoluteX="325dp" />
 
         <TextView
             android:id="@+id/textView12"
@@ -151,6 +140,7 @@
             android:id="@+id/autoCompleteTextView2"
             android:layout_width="302dp"
             android:layout_height="35dp"
+            android:layout_marginTop="44dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
             android:text="NOME COMPLETO"
@@ -158,9 +148,10 @@
             android:textColorHint="@color/white"
             android:textCursorDrawable="@drawable/arrow_6"
             android:textSize="16sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="56dp"
-            tools:layout_editor_absoluteY="162dp" />
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView15"
+            tools:ignore="MissingConstraints" />
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView3"
@@ -173,8 +164,9 @@
             android:textColorHint="@color/white"
             android:textCursorDrawable="@drawable/arrow_6"
             android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="56dp"
             tools:layout_editor_absoluteY="239dp" />
 
         <EditText
@@ -184,8 +176,9 @@
             android:background="@color/white"
             android:ems="10"
             android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="56dp"
             tools:layout_editor_absoluteY="303dp" />
 
         <TextView
@@ -213,7 +206,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editTextNomeCompleto"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="520dp" />
+            tools:layout_editor_absoluteY="517dp" />
 
         <EditText
             android:id="@+id/editTextNomeCompleto"
@@ -222,8 +215,9 @@
             android:background="@color/white"
             android:ems="10"
             android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="56dp"
             tools:layout_editor_absoluteY="450dp" />
 
         <EditText
@@ -233,8 +227,9 @@
             android:background="@color/white"
             android:ems="10"
             android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="56dp"
             tools:layout_editor_absoluteY="376dp" />
 
         <TextView
@@ -251,7 +246,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
