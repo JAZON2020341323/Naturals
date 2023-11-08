@@ -2,8 +2,7 @@
     <item>
         <shape
             android:shape="oval">
-            <solid android:color="@color/black" /> <!-- Cor do círculo -->
+            <solid android:color="#FFFFFF" /> <!-- Cor do círculo -->
         </shape>
     </item>
-     <!-- Imagem de espaço reservado -->
 </layer-list>

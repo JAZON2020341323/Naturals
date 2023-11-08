@@ -2,7 +2,6 @@ package com.example.naturals.teladeperfil;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.bumptech.glide.Glide;
 import com.example.naturals.R;
 import com.example.naturals.formLogin.TeladeLogin;
@@ -19,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.UploadTask;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
@@ -33,8 +33,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.UUID;
 
 public class activity_telade_perfil extends AppCompatActivity {
 
@@ -73,7 +76,6 @@ public class activity_telade_perfil extends AppCompatActivity {
             }
         });
 
-
         bt_deslogar = findViewById(R.id.bt_deslogar);
         bt_deslogar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,13 +106,17 @@ public class activity_telade_perfil extends AppCompatActivity {
                 Bitmap bitmap = handleImageOrientation(selectedImageUri);
                 // Redimensiona a imagem para um círculo
                 imgFotoPerfil.setImageBitmap(getCircularBitmap(bitmap));
-                // Faça o upload da imagem para o Firebase Storage
-                uploadImageToFirebaseStorage(selectedImageUri);
+                // Atualize o campo da imagem de perfil no Firebase Firestore
+                saveImageURLToDatabase(selectedImageUri.toString()); // Corrigido aqui
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+
+// ...
+
+
 
     private Bitmap handleImageOrientation(Uri imageUri) throws IOException {
         InputStream input = getContentResolver().openInputStream(imageUri);
@@ -165,7 +171,6 @@ public class activity_telade_perfil extends AppCompatActivity {
         return outputBitmap;
     }
 
-
     private void uploadImageToFirebaseStorage(Uri imageUri) {
         if (imageUri != null) {
             String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -206,7 +211,6 @@ public class activity_telade_perfil extends AppCompatActivity {
         }
     }
 
-
     private void saveImageURLToDatabase(String imageUrl) {
         // Obtém o UID do usuário atual
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -216,11 +220,31 @@ public class activity_telade_perfil extends AppCompatActivity {
         userRef.update("profile_images", imageUrl);
     }
 
+    // Salva a imagem localmente
+    private void saveImageLocally(Bitmap image) {
+        try {
+            File outputDir = getApplicationContext().getCacheDir(); // Pasta de cache do aplicativo
+            File imageFile = new File(outputDir, "profile_image.jpg");
+
+            FileOutputStream out = new FileOutputStream(imageFile);
+            image.compress(Bitmap.CompressFormat.JPEG, 90, out);
+            out.flush();
+            out.close();
+
+            SharedPreferences sharedPreferences = getSharedPreferences("user_profile", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("local_image_path", imageFile.getAbsolutePath());
+            editor.apply();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
 
-        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();;
+        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
         usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         DocumentReference documentReference = db.collection("usuario").document(usuarioID);
@@ -236,7 +260,7 @@ public class activity_telade_perfil extends AppCompatActivity {
                     // Use a biblioteca Glide para carregar a imagem no ImageView
                     Glide.with(this)
                             .load(imageUrl)
-                            .placeholder(R.drawable.placeholder_image) // Imagem de espaço reservado
+                            .placeholder(R.drawable.placeholder_image)
                             .into(imgFotoPerfil);
                 }
             }
