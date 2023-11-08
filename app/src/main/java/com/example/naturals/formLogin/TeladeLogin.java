@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.naturals.Activity.activities.ActivityCadastroProduto;
 import com.example.naturals.Activity.activities.MainActivity;
 import com.example.naturals.R;
 import com.example.naturals.formCadastro.ActivityCadastro;
