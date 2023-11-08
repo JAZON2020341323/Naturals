@@ -260,7 +260,7 @@ public class activity_telade_perfil extends AppCompatActivity {
                     // Use a biblioteca Glide para carregar a imagem no ImageView
                     Glide.with(this)
                             .load(imageUrl)
-                            .placeholder(R.drawable.placeholder_image)
+                            .placeholder(R.drawable.baseline_add_24)
                             .into(imgFotoPerfil);
                 }
             }
