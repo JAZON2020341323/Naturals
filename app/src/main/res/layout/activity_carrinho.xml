@@ -40,6 +40,7 @@
                     android:id="@+id/backBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="voltar_home"
                     android:padding="2dp"
                     app:srcCompat="@drawable/arrow" />
 

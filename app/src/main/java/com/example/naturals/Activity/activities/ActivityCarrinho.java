@@ -91,6 +91,10 @@ public class ActivityCarrinho extends AppCompatActivity {
         backBtn = findViewById(R.id.backBtn);
         emptyTxt = findViewById(R.id.emptyTxt);
     }
+    public void voltar_home(View view){
+        Intent in = new Intent(ActivityCarrinho.this, MainActivity.class);
+        startActivity(in);
+    }
 
     public void btnFinalizarCompra(View view){
         Intent in = new Intent(ActivityCarrinho.this, ActivityEndereco.class);

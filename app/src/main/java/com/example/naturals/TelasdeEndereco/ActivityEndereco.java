@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.naturals.Activity.activities.ActivityCarrinho;
 import com.example.naturals.Activity.activities.ActivityPagamento;
 import com.example.naturals.R;
 
@@ -18,6 +19,10 @@ public class ActivityEndereco extends AppCompatActivity {
         setContentView(R.layout.activity_endereco);
 
 
+    }
+    public void Voltando_carrinho (View view) {
+        Intent in = new Intent(ActivityEndereco.this, ActivityCarrinho.class);
+        startActivity(in);
     }
 
         public void btn_enviar_endereco (View view){

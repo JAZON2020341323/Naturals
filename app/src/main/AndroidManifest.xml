@@ -12,15 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Naturals"
         tools:targetApi="31">
-        <activity
-            android:name=".Activity.activities.ActivityProduto3"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.activities.ActivityProduto2"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.activities.ActivityProduto1"
-            android:exported="false" />
+
         <activity
             android:name=".Activity.activities.Chas_Lista"
             android:exported="false" />
@@ -36,7 +28,6 @@
         <activity
             android:name=".Activity.activities.Temperos_List"
             android:exported="false" />
-        <activity android:name=".Activity.activities.Cadastro_produto" />
         <activity
             android:name=".Activity.activities.DescricaoActivity"
             android:exported="false" />
@@ -47,7 +38,7 @@
             android:name=".teladeperfil.activity_telade_perfil"
             android:exported="false" />
         <activity
-            android:name=".Activity.activities.ActivityCarrinho"
+            android:name=".TelasdeEndereco.ActivityEndereco"
             android:exported="false" />
         <activity
             android:name=".Activity.activities.ActivityCadastroProduto"
@@ -57,7 +48,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".TelasdeEndereco.ActivityEndereco"
+            android:name=".Activity.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,6 +59,7 @@
         <activity android:name=".formLogin.TeladeLogin" />
         <activity android:name="com.example.naturals.TelasdeEndereco.EditarEndereco" />
         <activity android:name="com.example.naturals.TelasdeEndereco.AdicionarEndereco" />
+        <activity android:name=".Activity.activities.ActivityCarrinho" />
 
         <meta-data
             android:name="preloaded_fonts"
