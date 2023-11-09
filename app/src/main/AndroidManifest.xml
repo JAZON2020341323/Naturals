@@ -22,9 +22,6 @@
             android:name=".Activity.activities.ActivityProduto1"
             android:exported="false" />
         <activity
-            android:name=".TelasdeEndereco.AdicionarEndereco"
-            android:exported="false"  />
-        <activity
             android:name=".Activity.activities.Chas_Lista"
             android:exported="false" />
         <activity
@@ -60,7 +57,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".Activity.activities.MainActivity"
+            android:name=".TelasdeEndereco.ActivityEndereco"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,6 +66,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".formLogin.TeladeLogin" />
+        <activity android:name="com.example.naturals.TelasdeEndereco.EditarEndereco" />
+        <activity android:name="com.example.naturals.TelasdeEndereco.AdicionarEndereco" />
 
         <meta-data
             android:name="preloaded_fonts"
