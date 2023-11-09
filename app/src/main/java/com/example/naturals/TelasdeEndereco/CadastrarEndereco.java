@@ -55,7 +55,7 @@ public class CadastrarEndereco extends AppCompatActivity {
 
         // Cria um novo nó no banco de dados
         String userId = mAuth.getCurrentUser().getUid();
-        DatabaseReference userRef = mDatabase.child("usuarios").child(userId);
+        DatabaseReference userRef = mDatabase.child("usuario").child(userId);
 
         // Salva as informações do endereço no nó do usuário
         userRef.child("nome").setValue(nome);
