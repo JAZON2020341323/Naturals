@@ -62,10 +62,9 @@ public class MainActivity extends AppCompatActivity {
         Intent in = new Intent(MainActivity.this, com.example.naturals.ui.faleconosco.MainActivity.class);
         startActivity(in);
     }
-
     public void btnPerfil (View view){
-       Intent in = new Intent(MainActivity.this, activity_telade_perfil.class);
-       startActivity(in);
+        Intent in = new Intent(MainActivity.this, activity_telade_perfil.class);
+        startActivity(in);
     }
 
     public void btnCapsula (View view){

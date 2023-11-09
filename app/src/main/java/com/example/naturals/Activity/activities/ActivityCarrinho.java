@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.example.naturals.Helper.ChangeNumberItemsListener;
 import com.example.naturals.Helper.ManagmentCart;
 import com.example.naturals.R;
+import com.example.naturals.TelasdeEndereco.ActivityEndereco;
+import com.example.naturals.TelasdeEndereco.AdicionarEndereco;
 import com.example.naturals.adapter.CartListAdapter;
 
 
@@ -91,7 +93,7 @@ public class ActivityCarrinho extends AppCompatActivity {
     }
 
     public void btnFinalizarCompra(View view){
-        Intent in = new Intent(ActivityCarrinho.this, ActivityPagamento.class);
+        Intent in = new Intent(ActivityCarrinho.this, ActivityEndereco.class);
         startActivity(in);
     }
 }

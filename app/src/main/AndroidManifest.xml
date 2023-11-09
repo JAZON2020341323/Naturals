@@ -22,8 +22,8 @@
             android:name=".Activity.activities.ActivityProduto1"
             android:exported="false" />
         <activity
-            android:name=".Activity.activities.MainActivity"
-            android:exported="false" />
+            android:name=".TelasdeEndereco.AdicionarEndereco"
+            android:exported="false"  />
         <activity
             android:name=".Activity.activities.Chas_Lista"
             android:exported="false" />
@@ -47,7 +47,7 @@
             android:name=".Activity.activities.ActivityPagamento"
             android:exported="false" />
         <activity
-            android:name=".teladeperfil.activity_editar_perfil"
+            android:name=".teladeperfil.activity_telade_perfil"
             android:exported="false" />
         <activity
             android:name=".Activity.activities.ActivityCarrinho"
@@ -56,11 +56,11 @@
             android:name=".Activity.activities.ActivityCadastroProduto"
             android:exported="false" />
         <activity
-            android:name=".teladeperfil.activity_telade_perfil"
+            android:name=".teladeperfil.activity_editar_perfil"
             android:exported="false" />
 
         <activity
-            android:name=".TelasdeEndereco.AdicionarEndereco"
+            android:name=".Activity.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

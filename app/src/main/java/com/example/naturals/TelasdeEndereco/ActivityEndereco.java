@@ -12,7 +12,7 @@ public class ActivityEndereco extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_endereco);
+        setContentView(R.layout.activity_endereco);
     }
 
 }
