@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Naturals"
         tools:targetApi="31">
-
+        <activity
+            android:name=".TelasdeEndereco.CadastrarEndereco"
+            android:exported="false" />
         <activity
             android:name=".Activity.activities.Chas_Lista"
             android:exported="false" />
@@ -46,7 +48,6 @@
         <activity
             android:name=".teladeperfil.activity_editar_perfil"
             android:exported="false" />
-
         <activity
             android:name=".Activity.activities.MainActivity"
             android:exported="true">
@@ -57,8 +58,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".formLogin.TeladeLogin" />
-        <activity android:name="com.example.naturals.TelasdeEndereco.EditarEndereco" />
-        <activity android:name="com.example.naturals.TelasdeEndereco.AdicionarEndereco" />
+        <activity android:name=".TelasdeEndereco.EditarEndereco" />
+        <activity android:name=".TelasdeEndereco.AdicionarEndereco" />
         <activity android:name=".Activity.activities.ActivityCarrinho" />
 
         <meta-data
