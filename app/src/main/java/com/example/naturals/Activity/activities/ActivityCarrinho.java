@@ -15,7 +15,6 @@ import com.example.naturals.Helper.ChangeNumberItemsListener;
 import com.example.naturals.Helper.ManagmentCart;
 import com.example.naturals.R;
 import com.example.naturals.TelasdeEndereco.ActivityEndereco;
-import com.example.naturals.TelasdeEndereco.AdicionarEndereco;
 import com.example.naturals.adapter.CartListAdapter;
 
 

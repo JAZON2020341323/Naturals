@@ -38,7 +38,7 @@ import java.io.InputStream;
 
 public class activity_telade_perfil extends AppCompatActivity {
 
-    private TextView nome_usuario, nomeusuario, email_usuario, senha_usuario;
+    private TextView nome_usuario, nomeusuario, email_usuario, senha_usuario, editTextEndereco;
     private Button bt_deslogar;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String usuarioID;
@@ -251,6 +251,8 @@ public class activity_telade_perfil extends AppCompatActivity {
                 nome_usuario.setText(documentSnapshot.getString("nome"));
                 email_usuario.setText(email);
 
+
+
                 // Obtenha a URL da imagem do perfil do banco de dados
                 String imageUrl = documentSnapshot.getString("profile_images");
 
@@ -269,7 +271,9 @@ public class activity_telade_perfil extends AppCompatActivity {
         nome_usuario = findViewById(R.id.textView_show_full_name);
         email_usuario = findViewById(R.id.textView_show_email);
         bt_deslogar = findViewById(R.id.bt_deslogar);
+
     }
+
 
     public void btnEdndereco(View view){
         Intent in = new Intent(activity_telade_perfil.this, EditarEndereco.class);

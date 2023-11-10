@@ -103,57 +103,15 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp" />
 
-            <TextView
-                android:id="@+id/textView_show_endereco"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/divider_email"
-                android:layout_alignStart="@id/ic_email"
-                android:layout_marginStart="49dp"
-                android:layout_marginTop="19dp"
-                android:hint="Carregando..."
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/ic_endereco"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_below="@+id/ic_email"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/locationwhite" />
-
-            <View
-                android:id="@+id/divider_endereco"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/textView_show_full_name"
-                android:layout_marginTop="116dp"
-                android:background="@android:color/background_dark" />
-
-            <ImageView
-                android:id="@+id/btnEdndereco"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_below="@+id/divider_email"
-                android:layout_alignEnd="@+id/divider_endereco"
-                android:layout_alignBottom="@+id/divider_endereco"
-                android:layout_marginStart="159dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/baseline_arrowwhite"
-                android:onClick="btnEdndereco" />
-
             <Button
                 android:id="@+id/bt_deslogar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/divider_endereco"
+                android:layout_below="@+id/divider_email"
                 android:layout_alignStart="@+id/divider_email"
                 android:layout_alignEnd="@+id/divider_email"
                 android:layout_marginStart="112dp"
-                android:layout_marginTop="21dp"
+                android:layout_marginTop="49dp"
                 android:layout_marginEnd="106dp"
                 android:text="Deslogar" />
 
