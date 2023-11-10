@@ -29,8 +29,6 @@ import java.util.Map;
 
 public class ActivityEndereco extends AppCompatActivity {
 
-    private TextView textViewnome, textViewendereco, textViewEstado, textViewCidade, textViewcep, textViewtelefone;
-    private Button btnEnviarEndereco;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String usuarioID;
 
@@ -39,8 +37,6 @@ public class ActivityEndereco extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_endereco);
-
-
 
     }
 

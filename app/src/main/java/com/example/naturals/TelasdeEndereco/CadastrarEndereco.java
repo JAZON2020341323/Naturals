@@ -24,7 +24,6 @@ import java.util.Map;
 public class CadastrarEndereco extends AppCompatActivity {
 
     private EditText EditTextNome, editTextCep, editTextEndereco, editTextTelefone, editTextEstado, editTextCidade;
-    private TextView textViewnome, textViewendereco, textViewEstado, textViewCidade, textViewcep, textViewtelefone;
     private Button btnConfirmar;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
@@ -34,7 +33,6 @@ public class CadastrarEndereco extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_endereco);
-        SalvarDadosUsuario();
 
         EditTextNome = findViewById(R.id.EditTextNome);
         editTextCep = findViewById(R.id.editTextCep);
@@ -92,29 +90,4 @@ public class CadastrarEndereco extends AppCompatActivity {
                 });
     }
 
-    private void SalvarDadosUsuario() {
-        String nome = textViewnome.getText().toString();
-        String endereco = textViewendereco.getText().toString();
-        String estado = textViewEstado.getText().toString();
-        String cidade = textViewCidade.getText().toString();
-        String cep = textViewcep.getText().toString();
-        String telefone =  textViewtelefone.getText().toString();
-        usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-
-        DocumentReference documentReference = db.collection("Usuario").document(usuarioID);
-
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-        Map<String, Object> Usuario = new HashMap<>();
-        Usuario.put("nome", nome);
-        Usuario.put("logradouro", endereco);
-        Usuario.put("estado", estado);
-        Usuario.put("cidade", cidade);
-        Usuario.put("cep", cep);
-        Usuario.put("telefone", telefone);
-
-        usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-
-
-    }
 }
