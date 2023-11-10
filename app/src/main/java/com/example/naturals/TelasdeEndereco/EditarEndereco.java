@@ -1,5 +1,6 @@
 package com.example.naturals.TelasdeEndereco;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,6 +8,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.naturals.Activity.activities.ActivityCarrinho;
+import com.example.naturals.Activity.activities.MainActivity;
 import com.example.naturals.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -28,6 +32,11 @@ public class EditarEndereco extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_endereco);
+
+        public void voltar_endereco(View view){
+            Intent in = new Intent(EditarEndereco.this, ActivityEndereco.class);
+            startActivity(in);
+        }
 
         EditTextNome = findViewById(R.id.EditTextNome);
         editTextCep = findViewById(R.id.editTextCep);
@@ -110,4 +119,5 @@ public class EditarEndereco extends AppCompatActivity {
                     }
                 });
     }
+
 }
